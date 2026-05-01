@@ -162,6 +162,8 @@ Both features use the `claude-opus-4-6` model via the `@anthropic-ai/sdk` packag
 ---
 
 ## 📸 Screenshots
+## 🌐 Live Demo
+https://smart-notes-app-ai.onrender.com/
 
 > Add screenshots of your running app here.
 
