@@ -1,25 +1,25 @@
 # 📝 Smart Notes App
 
-A full-stack **MERN** (MongoDB, Express, React, Node.js) Notes application with **AI-powered features** using the Claude API.
+A full-stack **MERN** (MongoDB, Express, React, Node.js) Notes application with **AI-powered features** using the Groq API (LLaMA 3.1).
 
 ## ✨ Features
 
 - **Add, View & Delete notes** with a clean, responsive UI
 - **Color-coded notes** for better organization
 - **Search notes** by title, content, or tags
-- **AI: Summarize** — generates a 2-3 sentence summary of any note (Claude API)
-- **AI: Auto Tags** — automatically generates relevant tags for notes (Claude API)
+- **AI: Summarize** — generates a 2-3 sentence summary of any note (Groq API)
+- **AI: Auto Tags** — automatically generates relevant tags for notes (Groq API)
 - Notes persist in **MongoDB**
 
 ## 🛠 Tech Stack
 
-| Layer    | Technology              |
-| -------- | ----------------------- |
-| Frontend | React 18, Vite          |
-| Backend  | Node.js, Express.js     |
-| Database | MongoDB, Mongoose       |
-| AI       | Anthropic Claude API    |
-| HTTP     | Axios                   |
+| Layer    | Technology                  |
+| -------- | -----------------------     |
+| Frontend | React 18, Vite              |
+| Backend  | Node.js, Express.js         |
+| Database | MongoDB, Mongoose           |
+| AI       | AI | Groq API (LLaMA 3.1)   |
+| HTTP     | Axios                       |
 
 ## 📁 Project Structure
 
@@ -53,7 +53,7 @@ smart-notes-app/
 
 - **Node.js** v18+ ([Download](https://nodejs.org))
 - **MongoDB** — local install OR free [MongoDB Atlas](https://www.mongodb.com/atlas) cloud
-- **Anthropic API Key** — get one at [console.anthropic.com](https://console.anthropic.com)
+- Groq API Key — get one free at console.groq.com
 
 ---
 
@@ -84,7 +84,7 @@ MONGODB_URI=mongodb://localhost:27017/smart-notes
 # OR for MongoDB Atlas:
 # MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/smart-notes
 
-ANTHROPIC_API_KEY=sk-ant-your-key-here
+GROQ_API_KEY=your_groq_api_key_here
 PORT=5000
 ```
 
@@ -134,12 +134,12 @@ Visit **[http://localhost:3000](http://localhost:3000)** in your browser.
 ## 🤖 AI Features Explained
 
 ### Summarize
-Sends the note's title and content to the Claude API with a prompt to generate a concise 2-3 sentence summary. The summary is saved to MongoDB and displayed on the card.
+Sends the note's title and content to the Groq API with a prompt to generate a concise 2-3 sentence summary. The summary is saved to MongoDB and displayed on the card.
 
 ### Auto Tags
-Sends the note content to Claude asking for 3-5 relevant tags in JSON format. The response is parsed and tags are saved to the note in MongoDB.
+Sends the note content to Groq asking for 3-5 relevant tags in JSON format. The response is parsed and tags are saved to the note in MongoDB.
 
-Both features use the `claude-opus-4-6` model via the `@anthropic-ai/sdk` package.
+Both features use the `LLaMA 3.1` model via the `groq SDK` package.
 
 ## 🌐 Deployment (Optional)
 
