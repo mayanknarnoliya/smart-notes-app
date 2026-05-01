@@ -380,7 +380,7 @@ textarea {
 }
 
 .search-bar::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .search-bar:focus {

@@ -62,7 +62,7 @@ export default function App() {
         <input
           type="text"
           className="search-bar"
-          placeholder="Search notes or tags..."
+          placeholder="Search notes or tags..." 
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
