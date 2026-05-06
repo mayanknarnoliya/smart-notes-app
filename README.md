@@ -160,8 +160,6 @@ Both features use the `LLaMA 3.1` model via the `groq SDK` package.
 3. Replace `MONGODB_URI` in your `.env`
 
 ---
-
-## 📸 Screenshots
 ## 🌐 Live Demo
 https://smart-notes-app-ai.onrender.com/
 
